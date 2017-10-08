@@ -6,7 +6,7 @@ app.debug = True
 
 @app.route('/color_form')
 def form1():
-	render_template('color_form.html')
+	return render_template('color_form.html')
 
 #@app.route('/colorinfo')
 #def results()
