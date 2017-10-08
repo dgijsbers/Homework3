@@ -8,5 +8,8 @@ app.debug = True
 def form1():
 	return render_template('color_form.html')
 
-#@app.route('/colorinfo')
-#def results()
+@app.route('/colorinfo',methods = ['POST', 'GET'])
+def results():
+	if request.method == 'GET':
+		results = request.args
+		return render_template('results.html', results = results)
